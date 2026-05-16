@@ -3,7 +3,25 @@
 import React, { useState } from "react";
 import { Heart, MessageCircle, Repeat2, Bookmark } from "lucide-react";
 
-const Post = ({ name, image, profile, likes, comments, caption, time }) => {
+type PostProps = {
+  name: string;
+  image: string;
+  profile: string;
+  likes: string;
+  comments: string;
+  caption: string;
+  time: string;
+};
+
+const Post = ({
+  name,
+  image,
+  profile,
+  likes,
+  comments,
+  caption,
+  time,
+}: PostProps) => {
   const [liked, setLiked] = useState(false);
 
   return (
